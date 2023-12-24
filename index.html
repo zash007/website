@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>The Gymnation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowflakes Effect</title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .snowflakes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .snowflake {
+      position: absolute;
+      background-color: #ffffff;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      animation: snowfall linear infinite;
+    }
+
+    @keyframes snowfall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
+    .snowflake:nth-child(1) {
+      left: 10%;
+      animation-duration: 10s;
+    }
+
+    .snowflake:nth-child(2) {
+      left: 20%;
+      animation-duration: 15s;
+    }
+
+    .snowflake:nth-child(3) {
+      left: 30%;
+      animation-duration: 20s;
+    }
+    /* Add more snowflakes with different left positions and animation durations as needed */
+  </style>
 </head>
+<body>
+  <div class="snowflakes">
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <!-- Add more snowflakes as needed -->
+  </div>
+</body>
+</html>
 <body>
   <header class="text-gray-400 bg-gray-900 body-font"> 
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
